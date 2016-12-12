@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverfarms_UKCADContacts_name": {
+            "defaultValue": "UKCADContacts",
+            "type": "String"
+        },
+        "sites_UKCADContacts_name": {
+            "defaultValue": "UKCADContacts",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/fe7c62c4-42d3-48d0-ae16-a50426e96dae/resourceGroups/UKCADContacts/providers/Microsoft.Web/serverfarms/UKCADContacts'.",
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": 1
+            },
+            "kind": "app",
+            "name": "[parameters('serverfarms_UKCADContacts_name')]",
+            "apiVersion": "2015-08-01",
+            "location": "UK South",
+            "properties": {
+                "name": "[parameters('serverfarms_UKCADContacts_name')]",
+                "numberOfWorkers": 1
+            },
+            "resources": [],
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/fe7c62c4-42d3-48d0-ae16-a50426e96dae/resourceGroups/UKCADContacts/providers/Microsoft.Web/sites/UKCADContacts'.",
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('sites_UKCADContacts_name')]",
+            "apiVersion": "2015-08-01",
+            "location": "UK South",
+            "tags": {
+                "hidden-related:/subscriptions/fe7c62c4-42d3-48d0-ae16-a50426e96dae/resourceGroups/UKCADContacts/providers/Microsoft.Web/serverfarms/UKCADContacts": "Resource"
+            },
+            "properties": {
+                "name": "[parameters('sites_UKCADContacts_name')]",
+                "hostNames": [
+                    "ukcadcontacts.azurewebsites.net"
+                ],
+                "enabledHostNames": [
+                    "ukcadcontacts.azurewebsites.net",
+                    "ukcadcontacts.scm.azurewebsites.net"
+                ],
+                "hostNameSslStates": [
+                    {
+                        "name": "[concat(parameters('sites_UKCADContacts_name'),'ukcadcontacts.azurewebsites.net')]",
+                        "sslState": 0,
+                        "thumbprint": null,
+                        "ipBasedSslState": 0
+                    },
+                    {
+                        "name": "[concat(parameters('sites_UKCADContacts_name'),'ukcadcontacts.scm.azurewebsites.net')]",
+                        "sslState": 0,
+                        "thumbprint": null,
+                        "ipBasedSslState": 0
+                    }
+                ],
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_UKCADContacts_name'))]"
+            },
+            "resources": [],
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_UKCADContacts_name'))]"
+            ]
+        }
+    ]
+}
