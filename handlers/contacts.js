@@ -25,7 +25,7 @@
 
              for (var i in rows) {
                //  console.log('Post Titles: ', rows[i].post_title);
-                 res(rows);
+                 res.json(rows);
              }
          });
      //    res.json(repository.all())
