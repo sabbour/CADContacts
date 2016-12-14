@@ -18,7 +18,7 @@
 
          connection.connect();
 
-         var queryString = 'SELECT last_feedback FROM contacts';
+         var queryString = 'SELECT last_feedback FROM cases';
 
          connection.query(queryString, function(err, rows, fields) {
              if (err) throw err;
