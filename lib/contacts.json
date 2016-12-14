@@ -3,18 +3,21 @@
 		"id":1,
 		"name":"Barney Poland",
 		"email":"barney@contoso.com",
-		"phone":"0976845462377"
+		"phone":"0976845462377",
+		"caseId": 100
 	},
 	{
 		"id":2,
 		"name":"Lacy Barrera",
 		"email":"lacy@contoso.com",
-		"phone":"01923 5467896"
+		"phone":"01923 5467896",
+		"caseId": 255
 	},
 	{
 		"id":3,
 		"name":"Lora Riggs",
 		"email":"lora@contoso.com",
-		"phone":"078965467389"
+		"phone":"078965467389",
+		"caseId": 180,
 	}
 ]
