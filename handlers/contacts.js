@@ -18,14 +18,13 @@
 
          connection.connect();
 
-         var queryString = 'SELECT * FROM contacts';
+         var queryString = 'SELECT last_feedback FROM contacts';
 
          connection.query(queryString, function(err, rows, fields) {
              if (err) throw err;
 
              for (var i in rows) {
-               //  console.log('Post Titles: ', rows[i].post_title);
-                 res.json(rows);
+                  res.json(rows);
              }
          });
      //    res.json(repository.all())
