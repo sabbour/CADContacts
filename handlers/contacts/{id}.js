@@ -19,7 +19,7 @@
          connection.connect();
 
          var queryString = 'SELECT last_feedback FROM cases where contactId = " ' + req.params['Id'] + '"';
-
+         console.log(queryString);
          connection.query(queryString, function(err, rows, fields) {
              if (err) throw err;
 
