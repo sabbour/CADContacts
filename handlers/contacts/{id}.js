@@ -16,21 +16,27 @@
  module.exports = {
      get: function contacts_get(req, res) {
 
-         connection.connect();
-         var contactId = req.params['id'];
+         try {
 
-         var queryString = 'SELECT last_feedback FROM cases where contactId = "' + contactId  + '"';
-         console.log(queryString);
-         connection.query(queryString, function(err, rows, fields) {
-             if (err) throw err;
+             connection.connect();
+             var contactId = req.params['id'];
 
-             for (var i in rows) {
-                 console.log(rows);
-                 res.json(rows);
-             }
-         });
+             var queryString = 'SELECT last_feedback FROM cases where contactId = "' + contactId + '"';
+             console.log(queryString);
+             connection.query(queryString, function (err, rows, fields) {
+                 if (err) throw err;
 
+                 for (var i in rows) {
+                     console.log(rows);
+                     res.json(rows);
+                 }
+             });
 
+         } // try
+         catch(e)
+         {
+             console.log(e.message);
+         }
 
 //         res.json(repository.get(req.params['id']));
      }    
