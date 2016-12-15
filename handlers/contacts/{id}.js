@@ -18,7 +18,7 @@
 
          connection.connect();
 
-         var queryString = 'SELECT last_feedback FROM cases where contactId = " ' + req.params['id'] + '"';
+         var queryString = 'SELECT last_feedback FROM cases where contactId = " ' + req.params['id'].replace(/\s+/, "")  + '"';
          console.log(queryString);
          connection.query(queryString, function(err, rows, fields) {
              if (err) throw err;
