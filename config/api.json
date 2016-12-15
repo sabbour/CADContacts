@@ -6,9 +6,9 @@
     	"description": "A Contact Case list API based on Swagger and built using Node.js"
 	},
 	"paths": {
-		"/contacts": {
+		"/contactsCase": {
 			"get": {
-				"tags": ["Contacts"],
+				"tags": ["Contact Case"],
 				"operationId": "contacts_get",
 				"consumes": [],
 				"produces": ["application/json",
@@ -27,9 +27,9 @@
 				"deprecated": false
 			}
 		},
-		"/contacts/{id}": {
+		"/contactsCase/{id}": {
 			"get": {
-				"tags": ["Contacts"],
+				"tags": ["Contact Case"],
 				"operationId": "contacts_getById",
 				"consumes": [],
 				"produces": ["application/json",
