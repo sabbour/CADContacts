@@ -18,7 +18,7 @@
 
          try {
 
-             connection.connect();
+         //    connection.connect();
              var contactId = req.params['id'];
 
              var queryString = 'SELECT last_feedback FROM cases where contactId = "' + contactId + '"';
