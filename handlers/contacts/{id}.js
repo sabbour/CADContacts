@@ -27,7 +27,7 @@
                  if (err) throw err;
 
                  for (var i in rows) {
-                     console.log(rows.name);
+                     console.log(rows.last_feedback);
                      res.json(rows);
                  }
              });
