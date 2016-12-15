@@ -2,8 +2,8 @@
 	"swagger": "2.0",
 	"info": {
 		"version": "v1",
-		"title": "Contact List",
-    	"description": "A Contact list API based on Swagger and built using Node.js"
+		"title": "Contact Case List",
+    	"description": "A Contact Case list API based on Swagger and built using Node.js"
 	},
 	"paths": {
 		"/contacts": {
