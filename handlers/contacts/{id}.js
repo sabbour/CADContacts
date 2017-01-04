@@ -19,9 +19,9 @@
          try {
 
          //    connection.connect();
-             var contactId = req.params['id'];
+             var caseId = req.params['id'];
 
-             var queryString = 'SELECT last_feedback FROM cases where contactId = "' + contactId + '"';
+             var queryString = 'SELECT last_feedback FROM cases where caseId = "' + caseId + '"';
              console.log(queryString);
              connection.query(queryString, function (err, rows, fields) {
                  if (err) throw err;
