@@ -1,6 +1,7 @@
 [
 	{
 		"id":1,
+<<<<<<< HEAD
 		"name":"Barney Poland",
 		"email":"barney@contoso.com",
 		"caseNum": 4
@@ -18,4 +19,25 @@
 		"email":"lora@contoso.com",
 		"caseNum": 6
 	}
+=======
+"name":"Barney Poland",
+"email":"barney@contoso.com",
+"phone":"0976845462377",
+"caseId": 100
+},
+{
+"id":2,
+"name":"Lacy Barrera",
+"email":"lacy@contoso.com",
+"phone":"01923 5467896",
+"caseId": 255
+},
+{
+"id":3,
+"name":"Lora Riggs",
+"email":"lora@contoso.com",
+"phone":"078965467389",
+"caseId": 180,
+}
+>>>>>>> 72a31c9d4b6ee3dfad5f7d4ecf72aa4b067921e8
 ]
