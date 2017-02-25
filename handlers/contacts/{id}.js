@@ -8,7 +8,7 @@
      {
          host     : 'localhost',
          user     : 'root',
-         password : 'CADSession2016',
+         password : 'MiniCAD123',
          database : 'mysql',
      }
  );
