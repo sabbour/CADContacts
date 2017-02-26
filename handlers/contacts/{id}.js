@@ -27,8 +27,8 @@
                  if (err) throw err;
 
              //    for (var i in rows) {
-                     console.log(rows[i] + rows.length);
-                     res.json(rows[i]);
+                     console.log(rows[0] + rows.length);
+                     res.json(rows[0]);
              //     break;
              //   }
              });
