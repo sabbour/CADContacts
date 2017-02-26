@@ -26,8 +26,9 @@
              connection.query(queryString, function (err, rows, fields) {
                  if (err) throw err;
 
-                 for (var i in rows) {
-                     console.log(rows[i] + ' length ' + rows.length);
+              //   for (var i in rows) {
+                 for (var i = 0; i < row.length; i++) {
+                     console.log(rows[i]);
                      res.json(rows[i]);
              //     break;
                 }
