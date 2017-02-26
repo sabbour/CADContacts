@@ -27,7 +27,7 @@
                  if (err) throw err;
 
                  for (var i in rows) {
-                     console.log(rows[i] + rows.length);
+                     console.log(rows[i] + ' length ' + rows.length);
                      res.json(rows[i]);
              //     break;
                 }
