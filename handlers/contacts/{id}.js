@@ -26,11 +26,11 @@
              connection.query(queryString, function (err, rows, fields) {
                  if (err) throw err;
 
-                 for (var i in rows) {
-                     console.log(rows[i]);
+             //    for (var i in rows) {
+                     console.log(rows[i] + rows.length);
                      res.json(rows[i]);
-                  break;
-                }
+             //     break;
+             //   }
              });
 
          } // try
