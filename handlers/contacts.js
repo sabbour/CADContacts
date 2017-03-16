@@ -16,17 +16,18 @@
  module.exports = {
      get: function contacts_get(req, res) {
 
-         connection.connect();
+  //       connection.connect();
 
-         var queryString = 'SELECT last_feedback FROM cases';
+ //        var queryString = 'SELECT last_feedback FROM cases';
 
-         connection.query(queryString, function(err, rows, fields) {
-             if (err) throw err;
+   //      connection.query(queryString, function(err, rows, fields) {
+     //        if (err) throw err;
 
-             for (var i in rows) {
-                  res.json(rows);
-             }
-         });
+       //      for (var i in rows) {
+         //         res.json(rows);
+    //         }
+   //      });
      //    res.json(repository.all())
+     res.json('{"status": "Legacy API is working fine"}');
      }
  };
